@@ -27,7 +27,8 @@ body{
 }
 
 .main{
-
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -69,7 +70,7 @@ span{
 .form{
     margin-top: 40px;
     background-color: #FFFFFF;
-    margin: 60px;
+    margin: 50px;
     padding-block: 25px;
     border-radius: 10px;
 }
@@ -82,9 +83,23 @@ span{
 }
 
 .form__input__content{
+    width: 100%;
+    outline: none;
+    padding-block: 15px;
+    padding-inline: 30px;
+    text-align: start;
     border: 2px solid var(--shadow-card);
-    padding: 15px;
     border-radius: 6px;
+}
+
+.span-required{
+    display: flex;
+    display: none;
+    margin: 3px 0px 0px 1px;
+    flex-direction: column;
+    text-align: center;
+    color: red;
+    font-size: 11px;
 }
 
 .form__button{

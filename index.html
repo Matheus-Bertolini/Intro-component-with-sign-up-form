@@ -6,7 +6,6 @@
     <title>Intro component with sign up form</title>
     <link rel="stylesheet" href="site.css">
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <main class="main">
@@ -20,12 +19,28 @@
             <h3 class="main__card__h3"><span>Try it free 7 days</span> then $20/mo. thereafter</h3>
         </div>
 
-        <form class="form">
+        <form class="form" id="form">
             <div class="form__input">
-                <input class="form__input__content" type="text" placeholder="First Name" required>
-                <input class="form__input__content" type="text" placeholder="Last Name" required>
-                <input class="form__input__content" type="email" placeholder="Email Address" required>
-                <input class="form__input__content" type="password" placeholder="Password" required>
+                <div>
+                    <input class="form__input__content required" type="text" placeholder="First Name" oninput="nameValidate()">
+                    <span class="span-required">Nome deve ter no mínimo 3 caracteres </span>
+                </div>
+                
+                <div>
+                    <input class="form__input__content required" type="text" placeholder="Last Name" oninput="nameValidate2()">
+                    <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+                </div>
+
+                <div>
+                    <input class="form__input__content required" type="email" placeholder="Email Address" oninput="emailValidate()">
+                    <span class="span-required"> Dígite um emal válido</span>
+                </div>
+                
+                <div>
+                    <input class="form__input__content required" type="password" placeholder="Password" oninput="mainPassword()">
+                    <span class="span-required">Mínimo de 8 caracteres</span>
+                </div>
+
             </div>
 
             <button class="form__button">CLAIM YOUR FREE TRIAL</button>
@@ -36,5 +51,7 @@
         </form>
     </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
